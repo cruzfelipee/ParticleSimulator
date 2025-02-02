@@ -11,7 +11,6 @@ import Services.SeparatorService;
 import Structures.Grid;
 import Structures.Particle;
 import Tools.ParticleDrawer;
-import Tools.ParticleHeightComparator;
 
 public class Simulator {
     final int SUBSTEPS = 1; // for some reason increasing this makes particle separation worse at a high particle count
@@ -31,7 +30,6 @@ public class Simulator {
     int maxRadius;
     int frameCount;
     long lastFrameShowed;
-    ParticleHeightComparator heightComparator;
 
     public Simulator(int limitX, int limitY, int minRadius, int maxRadius) {
         this.particlesService = new ParticlesService();
@@ -41,7 +39,6 @@ public class Simulator {
         this.limitY = limitY;
         this.frameCount = 0;
         this.lastFrameShowed = 0;
-        this.heightComparator = new ParticleHeightComparator();
         this.minRadius = minRadius;
         this.maxRadius = maxRadius;
 
