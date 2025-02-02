@@ -79,3 +79,7 @@ You can configure the simulation parameters in the [App.java](https://github.com
 ## Acknowledgements
 
 - Inspired by @johnBuffer [Physics Engine](https://github.com/johnBuffer/VerletSFML) and @keyframe41 [Particle Simulation](https://github.com/keyframe41/ParticleSimulation)
+
+---
+
+> NOTE: The algorithm is meant to run at a variable framerate, which can lead to unexpected behaviour and will create a different simulation every time you execute the program.
