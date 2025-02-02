@@ -20,8 +20,8 @@ A particle simulation project that demonstrates particle physics, including grav
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/cruzfelipee/particle-simulator.git
-    cd particle-simulator
+    git clone https://github.com/cruzfelipee/ParticleSimulator.git
+    cd ParticleSimulator
     ```
 
 2. Open the project in your preferred IDE.
