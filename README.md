@@ -1,6 +1,6 @@
 # Particle Simulator
 
-A particle simulation project that demonstrates particle physics, including gravity, collisions, and boundary interactions. The simulation uses multi-threading to update particle velocities and positions efficiently.
+A highly customizable non-deterministic particle simulation that uses multithreading and grid hashing for extra performance.
 
 ## Features
 
@@ -30,51 +30,51 @@ A particle simulation project that demonstrates particle physics, including grav
 
 ### Running the Simulation
 
-1. Navigate to the [Main](http://_vscodecontentref_/0) class in [App.java](http://_vscodecontentref_/1).
+1. Navigate to the [App](https://github.com/cruzfelipee/ParticleSimulator/blob/2090e42e535d4e97102b00dd706fc344feb8a95b/Main/App.java#L6) class in [App.java](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Main/App.java).
 
-2. Run the [main](http://_vscodecontentref_/2) method to start the simulation.
+2. Run the [main](https://github.com/cruzfelipee/ParticleSimulator/blob/2090e42e535d4e97102b00dd706fc344feb8a95b/Main/App.java#L12) method to start the simulation.
 
 ### Configuration
 
-You can configure the simulation parameters in the [App.java](http://_vscodecontentref_/3) file:
+You can configure the simulation parameters in the [App.java](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Main/App.java) file:
 
-- [NUMBER_OF_PARTICLES](http://_vscodecontentref_/4): Number of particles in the simulation.
-- [MIN_RADIUS](http://_vscodecontentref_/5): Minimum radius of the particles.
-- [MAX_RADIUS](http://_vscodecontentref_/6): Maximum radius of the particles.
-- [MS_DELAY](http://_vscodecontentref_/7): Delay between the spawn of each particle.
+- [NUMBER_OF_PARTICLES](https://github.com/cruzfelipee/ParticleSimulator/blob/2090e42e535d4e97102b00dd706fc344feb8a95b/Main/App.java#L7): Number of particles in the simulation.
+- [MIN_RADIUS](https://github.com/cruzfelipee/ParticleSimulator/blob/2090e42e535d4e97102b00dd706fc344feb8a95b/Main/App.java#L8): Minimum radius of the particles.
+- [MAX_RADIUS](https://github.com/cruzfelipee/ParticleSimulator/blob/2090e42e535d4e97102b00dd706fc344feb8a95b/Main/App.java#L9): Maximum radius of the particles.
+- [MS_DELAY](https://github.com/cruzfelipee/ParticleSimulator/blob/2090e42e535d4e97102b00dd706fc344feb8a95b/Main/App.java#L10): Delay between the spawn of each particle.
 
 ## Project Structure
 
-- [Main](http://_vscodecontentref_/8): Contains the main application entry point.
-- [Services](http://_vscodecontentref_/9): Contains services for handling various aspects of the simulation (e.g., gravity, collisions, boundaries).
-- [Structures](http://_vscodecontentref_/10): Contains data structures used in the simulation (e.g., Particle, Vector2, Grid).
-- [Tools](http://_vscodecontentref_/11): Contains utility classes (e.g., ParticleDrawer, ParticleHeightComparator).
+- [Main](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Main): Contains the main application entry point.
+- [Services](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Services): Contains services for handling various aspects of the simulation (e.g., gravity, collisions, boundaries).
+- [Structures](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Structures): Contains data structures used in the simulation (e.g., Particle, Vector2, Grid).
+- [Tools](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Tools): Contains utility classes (e.g., ParticleDrawer, ParticleHeightComparator).
 
 ## Classes Overview
 
 ### Main
 
-- [App](http://_vscodecontentref_/12): The entry point of the application. Initializes and runs the simulation.
-- [Simulator](http://_vscodecontentref_/13): Manages the simulation, including updating particle positions and velocities.
+- [App](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Main/App.java): The entry point of the application. Initializes and runs the simulation.
+- [Simulator](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Main/Simulator.java): Manages the simulation, including updating particle positions and velocities.
 
-### Services
+### [Services](https://github.com/cruzfelipee/ParticleSimulator/tree/main/Services)
 
-- [BoundariesService](http://_vscodecontentref_/14): Handles boundary interactions for particles.
-- [CollisionService](http://_vscodecontentref_/15): Handles collision detection and resolution between particles.
-- [DragService](http://_vscodecontentref_/16): Applies drag force to particles.
-- [GravityService](http://_vscodecontentref_/17): Applies gravity force to particles.
-- [ParticlesService](http://_vscodecontentref_/18): Manages particle creation and spawning.
-- [SeparatorService](http://_vscodecontentref_/19): Ensures particles are not overlapping.
+- [BoundariesService](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Services/BoundariesService.java): Handles boundary interactions for particles.
+- [CollisionService](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Services/CollisionService.java): Handles collision detection and resolution between particles.
+- [DragService](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Services/DragService.java): Applies drag force to particles.
+- [GravityService](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Services/GravityService.java): Applies gravity force to particles.
+- [ParticlesService](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Services/ParticlesService.java): Manages particle creation and spawning.
+- [SeparatorService](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Services/SeparatorService.java): Ensures particles are not overlapping.
 
 ### Structures
 
-- [Particle](http://_vscodecontentref_/20): Represents a particle in the simulation.
-- [Vector2](http://_vscodecontentref_/21): Represents a 2D vector with various vector operations.
-- [Grid](http://_vscodecontentref_/22): A spatial grid for efficient neighbor searching.
+- [Particle](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Structures/Particle.java): Represents a particle in the simulation.
+- [Vector2](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Structures/Vector2.java): Represents a 2D vector with various vector operations.
+- [Grid](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Structures/Grid.java): A spatial grid for efficient neighbor searching.
 
 ### Tools
 
-- [ParticleDrawer](http://_vscodecontentref_/23): A JPanel for drawing particles.
+- [ParticleDrawer](https://github.com/cruzfelipee/ParticleSimulator/blob/main/Tools/ParticleDrawer.java): A JPanel for drawing particles.
 
 ## Acknowledgements
 
