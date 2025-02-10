@@ -4,10 +4,10 @@ import javax.swing.JFrame;
 import Structures.Vector2;
 
 public class App {
-    final static int NUMBER_OF_PARTICLES = 1000; // particle count
-    final static int MIN_RADIUS = 6; // min radius of the particles
+    final static int NUMBER_OF_PARTICLES = 1500; // particle count
+    final static int MIN_RADIUS = 4; // min radius of the particles
     final static int MAX_RADIUS = 8; // max radius of the particle
-    final static int MS_DELAY = 10; // delay between the spawn of each particle
+    final static int MS_DELAY = 1; // delay between the spawn of each particle
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("Particle Simulator");

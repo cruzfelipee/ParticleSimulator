@@ -48,13 +48,16 @@ public class Simulator {
     }
 
     @SuppressWarnings("unused")
-    public void waitForFrame() {
-        if (FRAMERATE > 0) {
-            try {
-                Thread.sleep(1000/FRAMERATE); // Sleep for a short period to control the update rate
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+    public void waitForFrame(long deltaTime) {
+        if (FRAMERATE <= 0) return;
+
+        // System.out.println("last frame time was " + (double) deltaTime/1000 + " and it shouldve been " + (double) 1/FRAMERATE);
+        // System.out.println("waiting for " + (1000/FRAMERATE - deltaTime));
+
+        try {
+            Thread.sleep(Math.max(0, 1000/FRAMERATE - deltaTime)); // Sleep for a short period to control the update rate
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
     
@@ -66,10 +69,12 @@ public class Simulator {
         while (running) {
             long now = System.currentTimeMillis();
 
-            update((double) (now - lastTick)/100);
+            long deltaTime = now - lastTick;
+
+            update((double) deltaTime/100);
             drawer.repaint(); // Updates the drawing
 
-            waitForFrame();
+            waitForFrame(deltaTime);
 
             lastTick = now;
         }
@@ -92,11 +97,12 @@ public class Simulator {
 
     public void updateParticleVelocity(Particle p, double deltaTime) {
         GravityService.applyGravity(p, deltaTime);
-            
+        DragService.applyDrag(p, deltaTime);
+
         ArrayList<Particle> neighbours = grid.getNeighbours(p);
 
         CollisionService.calculateCollisions(p, neighbours);
-        DragService.applyDrag(p, deltaTime);
+        
     }
 
     // Updates the velocity and position of all particles, according to how much time has passed since the last update (deltaTime)
